@@ -1,0 +1,22 @@
+<app-side-nav (sendKind)="kindRes=$event"></app-side-nav>
+<div class="restaurants">
+  <h1 class="header-1"><span class="green">Our</span> Restaurants</h1>
+  <div class="restaurants-list">
+
+    <div *ngFor="let restaurant of restaurants">
+      <a class="card" [routerLink]="'/restaurant/'+restaurant.id" *ngIf="restaurant.kind == kindRes || kindRes == 'All'">
+        <div class="card__image" [id]="restaurant.id">
+          <img [src]="restaurant.image_url" [alt]="restaurant.name" class="img">
+        </div>
+        <div class="card__detail">
+          <div class="card__detail--name">{{ restaurant.name }} </div>
+          <div class="card__detail--kind">{{ restaurant.kind }} </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+

@@ -1,0 +1,51 @@
+<!--<div *ngFor="let menu of menus">-->
+<!--<p>{{ menu.id}}</p>-->
+<!--<p>{{ menu.restaurant_id}}</p>-->
+<!--<p>{{ menu.name}}</p>-->
+<!--<p>{{ menu.image_url}}</p>-->
+<!--<p>{{ menu.price}}</p>-->
+<!--<p>{{ menu.deliver_time}}</p>-->
+<!--<hr>-->
+<!--</div>-->
+
+<div class="restaurants">
+
+
+  <div *ngFor="let restaurant of restaurants">
+    <div *ngIf=" restaurant.id == restaurantId ">
+      <div class="restaurants__detail">
+        <div class="restaurants__detail--name">{{ restaurant.name }}</div>
+        <div class="restaurants__detail--kind">{{ restaurant.kind }}</div>
+      </div>
+      <div class="restaurants__image">
+        <img [src]="restaurant.image_url" [alt]="restaurant.name">
+      </div>
+    </div>
+  </div>
+
+  <h2 class="header-2">menu</h2>
+  <div *ngFor="let menu of menus;">
+    <div class="menu__container" (click)="selectFood(menu.id, menu.price) " [id]="'menu'+menu.id">
+      <div class="menu">
+        <div class="menu__group">
+          <div class="menu__image">
+            <img [src]="menu.image_url" [alt]="menu.name" class="img">
+          </div>
+          <div class="menu__detail">
+            <div class="menu__detail--name">{{ menu.name }}</div>
+            <div class="menu__detail--price">{{ menu.price }} THB</div>
+          </div>
+        </div>
+        <div class="menu__selection">
+          <div [id]="'checked'+menu.id" [className]="'grey'">
+            <mat-icon>check_circle</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<app-nav [totalPrice]="totalPrice"></app-nav>

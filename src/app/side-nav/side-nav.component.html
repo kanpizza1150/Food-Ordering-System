@@ -1,0 +1,12 @@
+<div class="category" >
+  <mat-icon class="icon"> fastfood</mat-icon>
+  <ul *ngFor="let kind of kinds">
+    <li class="list" (click)="getKind(kind)" [ngStyle]="{'background-color': kind === this.selectedKind  ? 'var(--color-green)' : '#333333' }">{{ kind }}</li>
+  </ul>
+</div>
+
+
+
+
+
+

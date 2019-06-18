@@ -1,0 +1,113 @@
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 10rem 10rem 10rem;
+  color: black;
+  @media only screen and (max-width: 800px) {
+    margin: 2rem 4rem 10rem 4rem;
+  }
+  @media only screen and (max-width: 600px) {
+    margin: 2rem 3rem 10rem 2rem;
+  }
+
+  &__detail {
+    margin-bottom: 1rem;
+
+    &--name {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    &--kind {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: 35rem;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      @media only screen and (max-width: 800px) {
+        height: 32rem;
+      }
+      @media only screen and (max-width: 600px) {
+        height: 20rem;
+      }
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+
+  &__container {
+    border-bottom: 1px solid var(--color-grey);
+    padding: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f4f2f2;
+
+
+    }
+  }
+
+  &__selection {
+    justify-self: center;
+    align-self: center;
+
+  }
+
+  &__image {
+    img {
+      border-radius: 5px;
+      object-fit: cover;
+      height: 10rem;
+      width: 10rem;
+    }
+  }
+
+  &__detail {
+    padding-left: 3rem;
+
+    &--name {
+      font-size: 1.5rem;
+    }
+
+    &--price {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.header-2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.grey {
+  color: var(--color-grey);
+  transition: all .2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(.95);
+  }
+
+}
+
+.green {
+  color: var(--color-green);
+}

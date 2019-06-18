@@ -1,0 +1,46 @@
+.navbar{
+  background-color: var(--color-grey);
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: white;
+  display: flex;
+  padding: 1rem 4rem;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.detail{
+  &__text{
+    color: var(--color-grey-dark-3);
+    font-size: 1.2rem;
+  }
+  &__price{
+    color: var(--color-grey-dark-1);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+
+.btn{
+  color: white;
+  font-weight: 500;
+  background-color: var(--color-green);
+  border-radius: 50px;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .2s;
+  align-self: center;
+  height: 100%;
+  &:hover{
+    transform: scale(1.1);
+  }
+  &:active{
+    transform: scale(.95);
+  }
+}
